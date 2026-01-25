@@ -1,4 +1,4 @@
-import { blogs } from "../../db.json";
+import { blogs } from "../db.json";
 import { randomUUID } from "crypto";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
