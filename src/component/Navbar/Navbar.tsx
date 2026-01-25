@@ -9,11 +9,10 @@ import { useAuth } from "@/lib/AuthContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-<<<<<<< HEAD
+  
   const {user} = useAuth();
-=======
-  const {user } = useAuth();
->>>>>>> 4ce1dbcd1cfdf20067065a450a69a1e70810c0cd
+
+
   const navigate= useNavigate();
 
   const handleAuthClick =() =>{
