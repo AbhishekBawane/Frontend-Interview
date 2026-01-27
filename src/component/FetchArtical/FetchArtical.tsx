@@ -55,7 +55,7 @@ export default function FetchArticle() {
       <div className="w-full lg:max-w-sm lg:shrink-0 border p-3 rounded-lg">
         <h1 className="font-bold text-lg mb-4">Latest Articles</h1>
         
-        <div className="flex flex-row gap-4 overflow-x-auto no-scrollbar lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:max-h-[70vh]">
+        <div className="flex flex-row gap-4 overflow-x-auto no-scrollbar lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:max-h-[100vh]">
           {blogs.map((blog) => (
             <Cards
               key={blog.id}

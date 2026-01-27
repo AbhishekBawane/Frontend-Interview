@@ -67,9 +67,9 @@ export default function DetailAritcle({ id }:DetailPorps){
                                </CardHeader>  
                                <p className="text-5xl font-bold">{blog?.title}</p>  
                                <Button className=" p-1 bg-blue-700"><Share />Share Article</Button> 
-                               <div className="w-full flex flex-col rounded-5 p-4 items-center justify-around bg-gray-200 sm:flex-row">
-                                     <div className="text-center flex flex-col gap-2"><p>Catagory</p><span className="font-bold">{blog?.category}</span></div>
-                                     <div className="text-center flex flex-col gap-2"><p>Read Time</p><span className="font-bold">5 Min</span></div>
+                               <div className="w-full flex flex-col rounded-l-5 p-4 items-center justify-around bg-gray-200 sm:flex-row">
+                                     <div className="text-center flex flex-col gap-2"><p>Catagory</p><span className="font-bold">{blog?.category.join(', ')}</span></div>
+                                     <div className="text-center flex flex-col gap-2 border-"><p>Read Time</p><span className="font-bold">5 Min</span></div>
                                      <div className="text-center flex flex-col gap-2"><p>Date</p><span className="font-bold">{blog?.date}</span></div>
                                </div>
                                <p className="whitespace-pre-line text-gray-700 leading-relaxed">
