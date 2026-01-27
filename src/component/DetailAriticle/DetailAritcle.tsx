@@ -7,7 +7,6 @@ import type { Blog } from "@/type/blog";
 import { useAuth } from "@/lib/AuthContext";
 
 
-
 interface DetailPorps{
      id: string;
  
@@ -17,16 +16,20 @@ export default function DetailAritcle({ id }:DetailPorps){
 
     const {user} = useAuth();
 
-    const { data: blog, isLoading, error } = useQuery<Blog>({
-    queryKey: ["blog", id],
-    queryFn: async () => {
-      const res = await fetch(`/api/blogs/${id}`);
-      if (!res.ok) throw new Error("Failed to fetch blog");
-      return res.json();
-    },
-    enabled: !!id,
-  });
-  
+ const { data: blog, isLoading, error } = useQuery<Blog>({
+  queryKey: ["blog", id],
+  queryFn: async () => {
+    const res = await fetch(`api/blogs/${id}`);
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch blog");
+    }
+
+    return res.json();
+  },
+  enabled: !!id,
+});
+
        if(isLoading) {
            return (<>
         
