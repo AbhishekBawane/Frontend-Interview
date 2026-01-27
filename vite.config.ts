@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3001",
+        target: "https://frontend-interview-8811.onrender.com/",
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/api/, ""),
       },
